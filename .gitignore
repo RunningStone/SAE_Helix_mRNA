@@ -205,3 +205,9 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+lightning_logs/
+checkpoints/
+test_outputs/
+utr_data/
+Homo_sapiens*
