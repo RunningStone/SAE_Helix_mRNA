@@ -20,8 +20,8 @@ DEVICE="cpu"  # Change to "cuda" if GPU available
 # Probe parameters
 PROBE_MODEL_TYPE="ridge"
 PROBE_TRAIN_SPLIT=0.8
-PROBE_MIN_R2=0.2  # Lowered threshold for train R²
-PROBE_R2_METRIC="train"  # Use train R² instead of test R²
+PROBE_MIN_R2=0.6  # Lowered threshold for train R²
+PROBE_R2_METRIC="test"  # Use train R² instead of test R²
 
 # Run analysis
 python step3_causal_feature.py \

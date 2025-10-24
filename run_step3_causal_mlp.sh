@@ -14,14 +14,14 @@ NUM_SEQUENCE_PAIRS=100
 MIN_TARGET_DIFF=1.5  # MFE difference > 1.5 (about 0.4 std)
 MAX_LENGTH_RATIO=0.2  # Allow 20% length difference
 MAX_EDIT_DISTANCE=0.8  # Relaxed to 0.8 for more pairs (80% edit distance allowed)
-TARGET_BLOCKS="0 2"  # Only use blocks with trained SAE models (Step1 trained: 0,2,4,6)
+TARGET_BLOCKS="0 2 4 6"  # Only use blocks with trained SAE models (Step1 trained: 0,2,4,6)
 DEVICE="cpu"  # Change to "cuda" if GPU available
 
 # Probe parameters - USE MLP
 PROBE_MODEL_TYPE="mlp"  # Deep MLP: [256, 256, 128]
 PROBE_TRAIN_SPLIT=0.8
 PROBE_MIN_R2=0.2  # Lowered threshold for train R²
-PROBE_R2_METRIC="train"  # Use train R² instead of test R²
+PROBE_R2_METRIC="test"  # Use train R² instead of test R²
 # Note: MLP trains for 20 epochs with MSE loss
 
 # Run analysis
